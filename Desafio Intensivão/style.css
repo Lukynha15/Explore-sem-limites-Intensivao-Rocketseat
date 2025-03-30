@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+
+/* ESTILIZAÇÃO */
+:root {
+  font-size: 62.5%;
+
+  --bg-primary-color: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  --bg-card-color: #FFFFFF;
+  --tt-title: #B52184;
+  --tt-description: #312D64;
+}
+
+body, textarea, button {
+  font-size: 1.6rem;
+  font-family: "Mulish", sans-serif;
+}
+
+/* HEADER */
+header, aside {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+header {
+  padding-bottom: 10rem;
+}
+
+.page-title {
+  padding-left: 11rem;
+  height: 100%;
+  align-content: center;
+  position: relative;
+}
+
+h1 {
+  color: var(--tt-title);
+  font-weight: bold;
+  font-size: 6rem;
+}
+
+span {
+  color: var(--tt-description);
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+header button {
+  color: var(--tt-title);
+  height: 10rem;
+  width: 5rem;
+  border: 2px solid var(--tt-title);
+  border-radius: 70rem;
+  background: none;
+  cursor: pointer;
+  bottom: 10rem;
+  left: 11rem;
+  position: absolute;
+  transition: .3s;
+}
+
+header button:hover {
+  background-color: var(--tt-title);
+  color: var(--bg-card-color);
+  transform: scale(1.1);
+}
+
+header i .ph {
+  font-size: 4rem;
+}
+
+/* MAIN */
+main {
+  background: var(--bg-primary-color);
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 6.4rem 11rem;
+  gap: 6rem;
+}
+
+figure {
+  background: var(--bg-card-color);
+  border-radius: 2.4rem;
+  padding: 3.2rem 1.6rem 7.2rem 3.2rem;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.466);
+}
+
+figure h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+figure span {
+  font-size: 2rem;
+}
+
+figure img {
+  margin-bottom: 2rem;
+}
+
+/* ASIDE */
+aside img {
+  width: 100%;
+}
+
+.content {
+  padding: 9.5rem 9.2rem 10rem;
+}
+
+.content h1 {
+  margin-bottom: 3rem;
+  font-size: 4.2rem;
+}
+
+.input-content input {
+  margin-bottom: 2.4rem;
+  border-radius: 1.6rem;
+  border: 1px solid var(--tt-description);
+  height: 4.8rem;
+  width: 100%;
+  text-indent: 4rem;
+  font-size: 1.6rem;
+}
+
+.input-content textarea,input::placeholder {
+  color: var(--tt-description);
+  opacity: 0.7;
+}
+
+.input-content i{
+  position: absolute;
+  margin-top: 1.5rem;
+  pointer-events: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding-left: 1.4rem;
+  color: var(--tt-title);
+}
+
+textarea {
+  margin-bottom: 2.4rem;
+  border-radius: 1.6rem;
+  height: 12.6rem;
+  width: 100%;
+  padding-left: 1.4rem;
+  padding-top: 1.5rem;
+  border: 1px solid var(--tt-description);
+  resize: none;
+}
+
+form button {
+  background: var(--bg-primary-color);
+  color: var(--bg-card-color);
+  border: none;
+  border-radius: 16px;
+  height: 4.5rem;
+  width: 15rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+form button:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.8rem;
+}
+
+footer span {
+  color: #FFFFFF;
+  font-size: 1.9rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 65rem) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 22rem;
+  }
+
+  header img {
+    height: 37rem;
+  }
+
+  header h1 {
+    font-size: 3.2rem;
+  }
+
+  header span {
+    font-size: 2rem;
+    order: -1;
+    margin-left: -.5rem;
+  }
+
+  header button {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .page-title {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  /* MAIN */
+  section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5.2rem 3.9rem;
+    gap: 5rem;
+  }
+
+  section h1 {
+    font-size: 2.9rem;
+  }
+
+  section span {
+    font-size: 1.6rem;
+  }
+
+  figure {
+    padding: 2.6rem 6rem 2.6rem 2.6rem;
+  }
+
+  /* ASIDE */
+  aside {
+    display: flex;
+  }
+
+  .content {
+    padding: 7rem 4rem;
+  }
+
+  aside h1 {
+    font-size: 3.2rem;
+  }
+
+  aside img {
+    display: none;
+  }
+}
